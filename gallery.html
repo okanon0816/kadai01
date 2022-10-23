@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!-- 最初の設定は終わっています　必要な方は触ってください -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>チーズアカデミー_gallery</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/slick-theme.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@800&family=Silkscreen&family=Train+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen&family=Train+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/gallery.css">
+  <script src="https://kit.fontawesome.com/ca56fbab82.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+</head>
+<!-- 最初の設定は終わっています　必要な方は触ってください -->
+
+<body>
+  <div class="wrap">
+    <div class="main_wrap">
+      <div class="main_visual">
+        <h1><a href="http://127.0.0.1:5500/index.html"><span class="span_w">W</span>elc<span class="span_o">o</span>me!</a></h1>
+        <h2>
+          Cheese <br>
+          <span class="and">&</span> <br>
+          Bar <br>
+        </h2>
+        <img src="img/2people.png" alt="カップル" class="couple" id="couple">
+        <img src="img/heart-bo1.png" alt="" id="heart">
+      </div>
+
+      <p class="scroll">scroll</p>
+    </div>
+
+    <div id="gallery">
+        <div class="course_title">
+          <p class="fadein">
+            今日も仕事とプログラミング遅くまでお疲れさまです<br>
+            チーズとお酒でちょっと一息つきませんか…？
+          </p>
+        </div>
+
+        <div class="container">
+          <div class="wrapper_grid">
+            <div class="photo_item">
+              <img src="img/cheese01.jpg" alt="" class="cheese_photo">
+              <p class="photo_title">Fresh Cheese</p>
+              <p class="photo_text">モッツアレラチーズ、クリームチーズなど</p>
+            </div>
+            <div class="photo_item">
+              <img src="img/cheese02.jpg" alt="" class="cheese_photo">
+              <p class="photo_title">white mold cheese</p>
+              <p class="photo_text">カマンベール、ブリーチーズなど</p>
+            </div><div class="photo_item">
+              <img src="img/cheese03.jpg" alt="" class="cheese_photo">
+              <p class="photo_title">washed cheese</p>
+              <p class="photo_text">エポワス、リヴァロなど</p>
+            </div>
+            <div class="photo_item">
+              <img src="img/cheese04.jpg" alt="" class="cheese_photo">
+              <p class="photo_title">chevre cheese</p>
+              <p class="photo_text">ヴァランセなど</p>
+            </div><div class="photo_item">
+              <img src="img/cheese05.jpg" alt="" class="cheese_photo">
+              <p class="photo_title">blue mold cheese</p>
+              <p class="photo_text">ゴルゴンゾーラ、スティルトンなど</p>
+            </div><div class="photo_item">
+              <img src="img/cheese06.jpg" alt="" class="cheese_photo">
+              <p class="photo_title">semi-hard cheese</p>
+              <p class="photo_text">ゴーダチーズなど</p>
+            </div><div class="photo_item">
+              <img src="img/cheese07.jpg" alt="" class="cheese_photo">
+              <p class="photo_title">hard cheese</p>
+              <p class="photo_text">ラクレットなど</p>
+            </div><div class="photo_item">
+              <img src="img/cheese09.jpg" alt="" class="cheese_photo">
+              <p class="photo_title">extra-hard cheese</p>
+              <p class="photo_text">パルミジャーノ・レッジャーノなど</p>
+            </div><div class="photo_item">
+              <img src="img/cheese08.jpg" alt="" class="cheese_photo">
+              <p class="photo_title">processed cheese</p>
+              <p class="photo_text">スライスチーズ、6Pチーズなど</p>
+            </div>
+          </div>
+
+        <div class="btn_area">
+          <button disabled type="submit" class="neon_btn"><a href="">Top</a></button>
+        </div>
+      </div>
+
+      </div>
+
+  </div>
+  
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    ScrollReveal({ reset: true, distance: "100px",duration: 3000});
+    ScrollReveal().reveal('.couple', { delay: 300, origin: "right" } );
+    ScrollReveal({ reset: false, distance: "150px",duration: 3000});
+    ScrollReveal().reveal('.photo_item', { delay: 500, origin: "bottom",interval:200 } );
+
+    $("#couple").hover(
+      function(){ $("#heart").fadeIn(2000);
+    },
+      function(){ $("#heart").fadeOut(1000);
+
+      });
+
+    $(function(){
+    $(window).scroll(function (){
+        $('.fadein').each(function(){
+            var position = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > position - windowHeight + 100){
+              $(this).addClass('active');
+            }
+        });
+    });
+});
+
+</script>
+</body>
+
+</html>

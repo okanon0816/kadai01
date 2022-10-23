@@ -1,0 +1,310 @@
+/* ここから下に記載していく */
+@charset "UTF-8";
+
+/* 共通部分 */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    max-width: 100%;
+    background-color: black;
+    margin: 0 auto;
+    line-height: 3rem;
+    font-size: 1.6rem;
+    color: white;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* ギャラリー部分 */
+
+.wrapper_grid {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 6%;
+    margin-bottom: 50px;
+    margin: 0 30px;
+    text-align: center;
+    padding: 30px;
+}
+
+.photo_item {
+    margin-bottom: 30px;
+    padding: 10px;
+    background-color: #222;
+    border-radius: 2%;
+    box-shadow: 0 1px 0 0 gray;
+}
+
+.photo_item p {
+    color: white;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.cheese_photo {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* .photo_title {
+    font-family: 'Silkscreen', cursive;
+    font-size: 25px;
+} */
+
+/* ネオンサイン部分 */
+
+.main_visual {
+    display: flex;
+    /* background-color: gray; */
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Silkscreen', cursive;
+    font-family: 'Train One', cursive;
+    font-size: 35px;
+    text-shadow:
+        0 0 7px white,
+        0 0 10px white,
+        0 0 13px #ff007f,
+        0 0 15px #ff007f,
+        0 0 18px #ff007f;
+    border: white 3px double;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 
+        -1px -1px white,
+        1px -1px #fdf,
+        1px  1px #fdf,
+        -1px  1px #fdf,
+        0 0 .1em #fdf,
+        0 0 .1em white inset,
+        0 0 .5em #fdf,
+        0 0 .5em #fdf inset,
+        0 0 1em #fdf,
+        0 0 1em #fdf inset;   
+    position: absolute;
+    top: 50px;
+    left: 150px;   
+}
+
+.and {
+    position: absolute;
+    left: 80px;
+}
+
+h2 {
+    font-family: 'Sacramento', cursive;
+    font-size: 100px;
+    line-height: 120%;
+    position: absolute;
+    top: 80px;
+    left: 510px;  
+}
+
+.couple {
+    width: 300px;
+    position: absolute;
+    top: 250px;
+    left: 850px;  
+}
+
+#heart {
+    display: none;
+}
+
+.fadein {
+    opacity : 0;
+    transform : translate(0, 100px);
+    transition : all 1s;
+    text-align: center;
+    font-family: 'Kaisei Decol', serif;
+    font-size: 2.5rem;
+    margin: 200px 0 150px 0;
+    line-height: 50px;
+
+  }
+   
+.fadein.active{
+   opacity : 1;
+   transform : translate(0, 0);
+  }
+
+/* .course_title p {
+    text-align: center;
+    font-family: 'Kaisei Decol', serif;
+    font-size: 2.5rem;
+    margin: 200px 0 150px 0;
+    line-height: 50px;
+} */
+
+
+.photo_text {
+    font-family: 'Kaisei Decol', serif;
+}
+
+.photo_title {
+    font-family: 'Sacramento', cursive;
+    text-transform: capitalize;
+    font-size: 35px;
+    padding-top: 10px;
+}
+
+.span_w {
+    animation: flicker 1.5s infinite;
+    font-size: 40px;  
+}
+
+.span_o {
+    animation: flicker2 3s infinite;
+}
+
+/* ネオンちかちかアニメーション */
+
+@keyframes flicker {
+    
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #ff007f,
+        0 0 40px #ff007f,
+        0 0 80px #ff007f,
+        0 0 90px #ff007f,
+        0 0 100px #ff007f,
+        0 0 150px #ff007f;
+    
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+  }
+
+@keyframes flicker2 {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #ff007f,
+        0 0 40px #ff007f,
+        0 0 80px #ff007f,
+        0 0 90px #ff007f,
+        0 0 100px #ff007f,
+        0 0 150px #ff007f;
+    }
+
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
+.scroll {
+    margin-top: 15px;
+    text-align: center;
+    font-family: 'Sacramento', cursive;
+    font-size: 2.5rem;
+}
+
+.scroll::before {
+    content: "";
+    /*丸*/
+	width:10px;
+	height:10px;
+	border-radius: 50%;
+	background:#eee;
+    position: absolute;
+    bottom: 50px;
+    left: 625px;
+    animation: scroll 1.5s infinite ;
+}
+
+.scroll::after {
+    content: "";
+    /* 棒線 */
+	background:#eee;
+    width: 2px;
+    height: 50px;
+    position: absolute;
+    bottom: 0px;
+    /* top: 510px; */
+    left: 629px;
+    opacity: 0.8;
+}
+
+@keyframes scroll {
+    0% {
+        bottom: 50px;
+        opacity: 0;
+    }
+
+    3% {
+        bottom: 53px;
+    }
+
+    97% {
+        bottom: 3px;
+    }
+
+    100% {
+        bottom: 0px;
+        opacity: 0.8;
+    }
+}
+
+.btn_area {
+    margin: 0 auto;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.neon_btn {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    border: white 3px double;
+    color: white;
+    font-size: 2rem;
+    font-family: 'Silkscreen', cursive;
+    font-family: 'Train One', cursive;
+    text-shadow:
+    0 0 7px white,
+    0 0 10px white,
+    0 0 13px #ff007f,
+    0 0 15px #ff007f,
+    0 0 18px #ff007f;
+    box-shadow: 
+    -1px -1px white,
+    1px -1px #fdf,
+    1px  1px #fdf,
+    -1px  1px #fdf,
+    0 0 .1em #fdf,
+    0 0 .1em white inset,
+    0 0 .5em #fdf,
+    0 0 .5em #fdf inset,
+    0 0 1em #fdf,
+    0 0 1em #fdf inset;  
+    transition: all 0.3s linear;
+}
+
+.neon_btn:hover {
+    animation: flicker 1.5s infinite;
+}

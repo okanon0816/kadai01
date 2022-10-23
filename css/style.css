@@ -1,0 +1,380 @@
+/* ここから下に記載していく */
+@charset "UTF-8";
+
+/* 共通部分 */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    line-height: 3rem;
+    font-size: 1.6rem;
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* メインビジュアル */
+.mainvisual {
+    background-image: url("../img/mainbg.png");
+    background-repeat: no-repeat;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_message {
+    text-align: center;
+    min-height: auto 100%;
+    color: white;
+    letter-spacing: 6px;
+}
+
+.main_message h2{
+    font-size: 40px;
+    padding-bottom: 30px;
+}
+
+.main_message h3{
+    font-size: 20px;
+    font-weight: 100;
+}
+
+/* ヘッダー */
+.main-nav {
+    display: flex;
+    padding: 50px 0;
+}
+
+.main-nav li{
+    margin-right: 50px;
+    font-size: 15px;
+}
+
+.main-nav a{
+    color: #222;
+}
+
+/* ためしにつけてみたホバーのトマトがかわいかったのでイキ！ */
+.main-nav a:hover {
+    color: tomato;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+
+/* コンテンツ部分 */
+.content {
+    color: #222
+}
+
+/* 英語のタイトル共通 */
+.title_en {
+    font-size: 24px;
+    margin: 60px 0 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.title_ja {
+    font-size: 18px;
+    margin-bottom: 60px;
+}
+
+.title_yellow {
+    color: #ffd61a;
+}
+
+/* about部分 */
+#about {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.sentence1 {
+    padding-bottom: 40px;
+}
+
+.sentence2 {
+    padding-bottom: 40px;
+}
+
+.sentence3 {
+    padding-bottom: 80px;
+}
+
+/* スライドショー部分 */
+.slider {
+    /* display: flex; */
+    margin-bottom: 60px;
+}
+
+/* コース部分 */
+.course_title{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.course_title p{
+    padding-bottom: 60px;
+}
+
+.content1 {
+    display: flex;
+    align-items: center
+}
+
+.content2 {
+    display: flex;
+    align-items: center
+}
+
+.content3 {
+    display: flex;
+    align-items: center
+}
+
+.content_img {
+    width: 50%;
+}
+
+.content_text {
+    width: 50%;
+}
+
+.text_box {
+    width: 480px;
+    margin-left: 50px;
+}
+
+.content_title {
+    font-weight: bold;
+}
+
+/* ニュース部分 */
+
+#news {
+    /* background-color: tomato; */
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.title_news_ja {
+    padding-bottom: 60px;
+}
+
+.date {
+    margin: 30px 0 24px;
+}
+
+.news_articles {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.mouse {
+    width:100px;
+    position: absolute;
+    left: 180px;
+    z-index: -10;
+    /* display: none; */
+}
+
+.news_articles {
+    background-color: #fafafa;
+    position: relative;
+    z-index: 10;
+}
+
+.news_article {
+    width: 30%;
+    margin-right: 30px;
+}
+
+.news_article:hover {
+    opacity: 0.5;
+}
+
+.btn {
+    background-color: #ffd61a;
+    display: inline-block;
+    width: 300px;
+    height: 60px;
+    font-size: 18px;
+    color: white;
+    box-shadow: 0 10px darkkhaki;
+    border: none;
+    margin-bottom:  60px;
+}
+
+.mouse2 {
+    width: 100px;
+    position: absolute;
+    left: 1000px;
+    z-index: -10;
+}
+
+.fa-cheese {
+    margin-right: 10px;
+}
+
+.fa-cheese:hover {
+    transform: scale(1.5 , 1.5);
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* activeを指定するとクリックされている間だけCSSが適用される */
+.btn:active {
+    position: relative;
+    top: 10px;
+    box-shadow: none;
+}
+
+/* アクセス */
+#access{
+    background-color: #fafafa;
+    text-align: center;
+    padding-top: 60px;
+}
+
+dl {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    text-align: left;
+    margin: 0 auto;
+    line-height: 30px;
+    padding: 60px 0;
+}
+
+dl dt {
+    width: 30%;
+}
+
+dl dd {
+    width: 70%;
+}
+
+  /* コンタクトフォーム */
+ #contact {
+    /* background-color: tomato; */
+    text-align: center;
+}
+
+.contact_title {
+    margin-bottom: 70px;
+}
+
+.contact_text1 {
+    margin-bottom: 30px;
+}
+
+.contact-table {
+    width: 740px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    vertical-align: top;
+    display:table
+  }
+
+.contact-item,
+.contact-body {
+  border-top: 1px solid #bfbfbf;
+  border-bottom: 1px solid #bfbfbf;;
+  text-align: left; 
+}
+
+.contact-item {    
+  width: 240px; 
+  /* background-color: aquamarine; */
+  padding: 8px 64px 8px 16px;
+  border-right: 1px solid #bfbfbf; 
+  vertical-align: top;
+}
+
+.contact-body {
+  width: 500px; 
+  /* background-color: pink; */
+  padding: 8px;
+  vertical-align: middle;
+}
+
+input,textarea,select {
+    border: #bfbfbf 1px solid;
+    padding: 8px 15px;
+}
+
+.motives {
+    margin-bottom: 24px;
+    white-space: nowrap;
+}
+
+.btn_submit {
+    margin: 30px 0 140px 0;
+}
+
+
+/* フッター */
+.footer {
+    background-color: #707070;
+    color: #fff;
+}
+
+.footer p {
+    padding: 30px 0;
+    text-align: center;
+}
+
+/* ギャラリー部分 */
+
+/* .wrapper_grid {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 6%;
+    margin-bottom: 50px;
+    margin: 0 30px;
+    text-align: center;
+}
+
+.photo_item {
+    margin-bottom: 30px;
+    padding: 10px;
+    background-color: #222;
+    border-radius: 2%;
+    box-shadow: 0 1px 0 0 gray;
+}
+
+.photo_item p {
+    color: white;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.cheese_photo {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.photo_title {
+    font-family: 'Silkscreen', cursive;
+    font-size: 25px;
+} */
